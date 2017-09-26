@@ -14,18 +14,7 @@
 	    $i++;
 	}
 
-	// for($x = 0 ; $x < count($dataset) ; $x++){
-	// 	echo $dataset[$x]['a'];
-	// 	echo " ";
-	// 	echo $dataset[$x]['b'];
-	// 	echo " ";
-	// 	echo $dataset[$x]['c'];
-	// 	echo " ";
-	// 	echo $dataset[$x]['d'];
-	// 	echo " ";
-	// 	echo $dataset[$x]['e'];
-	// 	echo "<br>";
-	// }
+	
 	
 	//rata-rata per kolom
 	$jumlahA = 0;
@@ -103,19 +92,35 @@
 	echo "stdD = $stdD <br>";
 	echo "stdE = $stdE <br><br><br>";
 
+	echo "<table>";
+	echo "<tr>";
+	echo "<th>kolom A</th>";
+	echo "<th>kolom B</th>";
+	echo "<th>kolom C</th>";
+	echo "<th>kolom D</th>";
+	echo "<th>kolom E</th>";
+	echo "</tr>";
+
+
 	for($x = 0 ; $x < count($newdataset) ; $x++){
-		echo $dataSigmoidal[$x]['a'];
-		echo "  === ";
-		echo $dataSigmoidal[$x]['b'];
-		echo " ===  ";
-		echo $dataSigmoidal[$x]['c'];
-		echo "  === ";
-		echo $dataSigmoidal[$x]['d'];
-		echo "  === ";
-		echo $dataSigmoidal[$x]['e'];
-		echo "<br>";
+		echo "<tr>";
+		echo "<td>";
+		echo round($dataSigmoidal[$x]['a'] , 3);
+		echo "</td>";
+		echo "<td>";
+		echo round($dataSigmoidal[$x]['b'] , 3);
+		echo "</td>";
+		echo "<td>";
+		echo round($dataSigmoidal[$x]['c'] , 3);
+		echo "</td>";
+		echo "<td>";
+		echo round($dataSigmoidal[$x]['d'] , 3);
+		echo "</td>";
+		echo "<td>";
+		echo round($dataSigmoidal[$x]['e'] , 3);
+		echo "</td>";
 	
 	}
-
+	echo "</table>";
 
 ?>

@@ -82,16 +82,30 @@
 
 	}
 
+	echo "<table>";
+	echo "<tr>";
+	echo "<th>kolom A</th>";
+	echo "<th>kolom B</th>";
+	echo "<th>kolom C</th>";
+	echo "<th>kolom D</th>";
+	echo "</tr>";
 	for($x = 0 ; $x < count($newdataset) ; $x++){
-		echo $newdataset[$x]['a'];
-		echo "  === ";
-		echo $newdataset[$x]['b'];
-		echo " ===  ";
-		echo $newdataset[$x]['c'];
-		echo "  === ";
-		echo $newdataset[$x]['d'];
-		echo "<br>";
+		echo "<tr>";
+		echo "<td>";
+		echo round($newdataset[$x]['a'] , 3);
+		echo "</td>";
+		echo "<td>";
+		echo round($newdataset[$x]['b'] , 3);
+		echo "</td>";
+		echo "<td>";
+		echo round($newdataset[$x]['c'] , 3);
+		echo "</td>";
+		echo "<td>";
+		echo round($newdataset[$x]['d'] , 3);
+		echo "</td>";
+		
 	}
+	echo "</table>";
 
 
 ?>
